@@ -13,4 +13,10 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../Manager.Core/Manager.Core.csproj" />
+    <ProjectReference Include="../Manager.Infrastructure/Manager.Infrastructure.csproj" />
+    <ProjectReference Include="../Manager.Api/Manager.Api.csproj" />
+  </ItemGroup>
+
 </Project>
