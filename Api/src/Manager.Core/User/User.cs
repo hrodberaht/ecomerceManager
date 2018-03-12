@@ -21,5 +21,7 @@ namespace Manager.Core.User
             return userName;
 
         }
+
+        
     }
 }
