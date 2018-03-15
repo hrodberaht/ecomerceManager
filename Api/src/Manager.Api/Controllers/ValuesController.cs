@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Manager.Infrastructure.Send.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Manager.Api.Controllers
@@ -11,9 +12,11 @@ namespace Manager.Api.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            ClassRequest msg = new ClassRequest();
+            var a = await msg.GetDataAsync();
+            return a;
         }
 
         // GET api/values/5
