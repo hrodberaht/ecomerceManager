@@ -6,14 +6,12 @@ namespace Manager.Infrastructure.Send.Request
 {
     public class ClassRequest
     {
-        private string msg;
         HttpClient client = new HttpClient();
 
-        public async Task<string> GetDataAsync()
+        public async Task<object> GetDataAsync()
         {
-            var data = await client.GetStringAsync("https://api.baselinker.com/connector.php");
-
-            return msg = data;
+            var data = await client.GetStreamAsync("https://dog.ceo/api/breeds/list/all");
+            return data;
            
         }
     }

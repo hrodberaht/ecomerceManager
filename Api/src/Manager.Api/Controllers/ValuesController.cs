@@ -12,7 +12,8 @@ namespace Manager.Api.Controllers
     {
         // GET api/values
         [HttpGet]
-        public async Task<string> Get()
+        [Produces("application/json")]
+        public async Task<object> Get()
         {
             ClassRequest msg = new ClassRequest();
             var a = await msg.GetDataAsync();
